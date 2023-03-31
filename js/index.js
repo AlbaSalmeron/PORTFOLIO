@@ -25,7 +25,6 @@ const operacion = 100 / ( numImg / numImgVisibles )
 next.addEventListener(`click`,()=>{
     
     carrouselContador++
-    
 
     if( carrouselContador >= ( numImg / numImgVisibles )){
         carrouselContador = 0
