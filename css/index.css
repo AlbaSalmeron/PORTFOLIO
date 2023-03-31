@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  /* Evitamos problemas con las imagenes */
+  img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+  
+  /* Reseteamos los enlaces para funcionar como cajas... */
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* ... excepto los que se encuentran en párrafos */
+  p a {
+    display: inline;
+  }
+  
+  /* Quitamos los puntos de los <li> */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Configuramos anclas suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Evitamos problemas con los pseudoelementos de quotes */
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+  }
+  
+  /* Configuramos el texto que seleccionamos */
+  ::-moz-selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  ::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  
+  /* Nivelamos problemas de tipografías y colocación de formularios */
+  form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  /* Reseteamos las tablas */
+  table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Evitamos problemas con los SVG */
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  /* (Probándolo, no usar en producción) En el caso de añadir una  */
+  /* p svg{
+    display: inline;
+    width: initial;
+  } */
+  /* Configuramos la tipografía para toda la web */
+  body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Reenie Beanie', cursive;
+    font-family: 'Playfair Display', serif;
+    color: var(--negro);
+    /* opcional */
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+    
+  }
+
+
+/* PORTFOLIO */
+    /* HOME */
+.Home{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFAF4;
+   
+    
+    /* background-color: red; */
+}
+.Home-header{
+    /* background-color: green; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+
+}
+.Indice{
+    /* background: rebeccapurple; */
+    font-size: 1.5em;
+    padding: 2em;
+}
+.Home-p{
+    /* background-color: lawngreen; */
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    padding: 1em;
+    animation: movimiento  10s infinite alternate;
+    
+}
+.Home-nav{
+    width: 100%;
+    min-height: 20vh;
+    /* background-color: blueviolet; */
+    padding: 1em 1em 0em 1em;
+    font-size: 1.2em;
+    
+    
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-star;
+    font-family: 'Didact Gothic', sans-serif;
+}
+.Home-ul{
+    /* background-color: blue; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 8em;
+}
+.Home-li{
+    /* background-color: aqua; */
+    padding: .8em;
+    transition: all 1s ease;
+}
+.Home-li:hover{
+    color:#444343;
+    transform: scale(1.1);
+}
+.Home-h1{
+    width: 100%;
+    /* background-color: red; */
+    font-size: 21.2em;
+    line-height: 200px;
+}
+
+@keyframes movimiento{
+    from{
+        transform: translateY(0%);
+       
+
+    }
+    to{
+        transform: translateY(200%);
+        
+
+    }
+}
+
+/* ABOUT */
+
+.About{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#202020;
+    padding-top:2em;
+    color: #FFFAF4;
+    
+}
+.About-header{
+    width: 100%;
+    /* background-color: greenyellow; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.About-span{}
+.About-svg{
+    width: 3em;
+   
+    margin-right: 3em;
+    /* background-color: aqua; */
+}
+.About-content{
+    width: 100%;
+    height: 80vh;
+    /* background-color: darkmagenta; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap:1em;
+    position: relative;
+}
+.About-h2{
+    font-size: 16em;
+    position: absolute;
+    left: -4%;
+    bottom: 0;
+    /* background-color: green; */
+    
+    writing-mode: vertical-lr;
+}
+.About-p{
+    margin: auto;
+    width: 50%;
+    position: absolute;
+    top:20%;
+    left: 30%;
+    font-family: 'Didact Gothic', sans-serif;
+    /* background-color: hotpink; */
+}
+
+/* WORKS */
+.Works{
+  
+  width: 100%;
+  min-height: 100vh;
+  padding-top:2em;
+  background-color: #FFFAF4;
+  position: relative;
+  overflow: hidden;
+} 
+.Works-wrapper{
+  margin: auto;
+  width: 95%;
+  /* background-color: red; */
+  margin-top:2em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: re;
+
+}
+
+.Works-li{
+  font-size: 7em;
+  font-family: 'Didact Gothic', sans-serif;
+
+}
+.Works-li:hover{
+  font-weight: 900;
+  color: #444343;
+}
+
+.Works-container{
+  width: 40%;
+  min-height: 31.25rem;
+  /* background-color: lime; */
+  margin-right: 2em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+
+}
+.Works-img{
+  background-color: #444343;
+  position: absolute;
+  left:0;
+}
+.Works-h2{
+  /* background-color: goldenrod; */
+  font-size: 20em;
+  position: absolute;
+  bottom: -10%;
+  right: -2%;
+}
+
+/* PIXAR */
+
+.Pixar{
+  width: 100%;
+  min-height: 100vh;
+  background-color:#FFFAF4;
+  font-family: 'Didact Gothic', sans-serif;
+}
+.Project-header{
+  width: 100%;
+  /* background-color: gold; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3em;
+
+  line-height: 100px;
+  border-bottom: 2px solid black;
+
+}
+.Project-p{
+  /* background-color: aqua; */
+  font-size: 13em;
+  font-family: 'Reenie Beanie', cursive;
+
+}
+.Project-h3{
+  font-size: 8em;
+}
+.Carrousel{
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+ 
+  
+  /* background-color: red; */
+}
+.Carrousel-container{
+  width: 100%;
+  min-height: 400px;
+  background-color: gold;
+  
+}
+.Carrousel-btn{
+  width: 2em;
+  background-color: rgb(157, 156, 156);
+  opacity: 80%;
+  border-radius: 50%;
+  padding: .5em;
+  color: #FFFAF4;
+  margin: 1em;
+  transition: all .5s ease;
+}
+.Carrousel-btn:hover{
+  transform: scale(1.2);
+}
+.Carrousel-btn.isActive{
+  background-color: #444343;
+  
+}
+.Prev{}
+.Next{}
+.Carrousel-svg{}
+
+.Carrousel-galeria{
+  width: 200%;
+  background-color: rebeccapurple;
+
+  display: grid;
+  grid-template-columns: repeat(6 , 1fr );
+  
+  gap:2em;
+  transform: translateX(-0%);
+  transition: all .5s ease;
+
+}
+.Carrousel-img{
+  width: 100%;
+  background-color: grey;
+  
+  min-height: 25em;
+  transform: translateX(0%);
+}
+.Carrousel-img.isActive{
+  transform: translateX(-80%);
+}
+.Carrousel-galeria.isActive{
+  transform: translateX(-80%);
+  overflow: hidden;
+}
+   
