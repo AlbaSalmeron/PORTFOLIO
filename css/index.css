@@ -598,13 +598,13 @@ en un estado "activo", indicado por la clase ".isActive". */
   animation: slideRight .5s ease;
 
 }
-.Header-button{
+.Header-a{
   /* background-color: #ff7ae9; */
   width: 8em;
   margin: 2em;
   transition: all .5s ease;
 }
-.Header-button:hover{
+.Header-a:hover{
   transform: scale(1.3);
 }
 .Project-main{
