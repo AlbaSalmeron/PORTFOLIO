@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01-pixar</title>
+    <title>03-weTransfer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:wght@400;500;600;700;800;900&family=Reenie+Beanie&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/index.css">
-    <script src="js/works.js" defer></script>
-   
+   <script src="js/works.js" defer></script>
+
 </head>
 <body>
-<!-- Esta es una sección de código HTML que representa una página de proyecto para Pixar. Incluye un
-encabezado con un título y un botón para volver a la página de inicio, una sección principal con una
-descripción del proyecto y algunas imágenes, una sección de carrusel con una galería de imágenes y
-un pie de página con un botón para ir a la siguiente página del proyecto. El código también incluye
-algunos archivos CSS y JavaScript para diseñar y agregar funcionalidad a la página. -->
-    <section class="Project Pixar ">
+   <!-- Esta es una sección de código HTML que representa una página de proyecto para WeTransfer. Incluye
+   un encabezado con un título y un botón para volver a la página de inicio, una sección principal
+   con una descripción del proyecto y algunas imágenes, una sección de carrusel con una galería de
+   imágenes y un pie de página con botones para navegar a la anterior. y las siguientes páginas del
+   proyecto. El código HTML también incluye enlaces a archivos CSS y JavaScript para estilo y
+   funcionalidad. -->
+    <section class="Project WeTransfer ">
         <div class="Project-header Header">
             <div class="Header-title">
-                <p class="Header-p">#01</p>
-                <h3 class="Header-h3">pixar</h3>
+                <p class="Header-p">#03</p>
+                <h3 class="Header-h3">weTransfer</h3>
             </div>
             <img src="assets/estrella.png" alt="" class="Project-star uno">
             <button class="Header-button">
@@ -31,17 +32,17 @@ algunos archivos CSS y JavaScript para diseñar y agregar funcionalidad a la pá
         </div>
         <div class="Project-main Main">
             <img src="assets/estrella2.png" alt="" class="Project-star dos">
-            <p class="Main-p">La maquetación de la página web de Pixar fue uno de los primeros trabajos que hice cuando comencé a estudiar desarrollo web. Toda la maquetación esta hecha con flex, ya que el profesor quería que fuésemos cogiendo soltura en este tema. Cuando el avancé en el curso, pude mejorar parte de esta web añadiendo un menú desplegable con Javascript. Es una maquetación sencilla pero que me ayudó a comprender conceptos básicos del front-end.
+            <p class="Main-p">Repasando los tipos de "position", maqueté la web de WeTransfer.Practique bastante la profundidad de los elemento y como jugar con ellos para dar ciertos efectos. 
             </p>
             <img src="assets/estrella2.png" alt="" class="Project-star tres">
             <img src="assets/estrella3.png" alt="" class="Project-star cuatro">
             <img src="assets/estrella3.png" alt="" class="Project-star cinco">
             <img src="assets/estrella.png" alt="" class="Project-star seis">
         </div>
-       <!-- El código representa una sección de carrusel para mostrar una galería de imágenes. Incluye un
-       contenedor con un botón anterior y siguiente para navegar por las imágenes y una galería con
-       varios elementos de imagen. El carrusel está diseñado para ser interactivo y permitir al
-       usuario ver todas las imágenes de la galería. -->
+       <!-- Esta es una sección de código HTML que representa una galería de carrusel para el proyecto
+       WeTransfer. Incluye un contenedor con un botón anterior y siguiente, y una galería de
+       imágenes representadas por una serie de elementos div con una etiqueta de imagen dentro. El
+       carrusel está controlado por un archivo JavaScript vinculado al documento HTML. -->
         <div class="Project-carrousel Carrousel">
             <div class="Carrousel-container">
                 <button class="Carrousel-btn Prev">
@@ -51,16 +52,16 @@ algunos archivos CSS y JavaScript para diseñar y agregar funcionalidad a la pá
                 </button>
                 <div class="Carrousel-galeria">
                     <div class="Carrousel-elemento">
-                        <img src="assets/Pixar1.jpg" alt="imagen" class="Carrousel-img">
+                        <img src="assets/weTransfer1.jpg" alt="imagen" class="Carrousel-img">
                     </div>
                     <div class="Carrousel-elemento">
-                        <img src="assets/displayMenuMobile.jpg" alt="imagen" class="Carrousel-img">
+                        <img src="assets/weTransfer2.jpg" alt="imagen" class="Carrousel-img">
                     </div>
                     <div class="Carrousel-elemento">
-                        <img src="assets/Pixar2.jpg" alt="imagen" class="Carrousel-img">
+                        <img src="assets/weTransfer3.jpg" alt="imagen" class="Carrousel-img">
                     </div>
                     <div class="Carrousel-elemento">
-                        <img src="assets/PixarMenuMobile.jpg" alt="imagen" class="Carrousel-img">
+                        <img src="assets/weTransfer4.jpg" alt="imagen" class="Carrousel-img">
                     </div>
                 </div>
                 <button class="Carrousel-btn Next">
@@ -70,13 +71,17 @@ algunos archivos CSS y JavaScript para diseñar y agregar funcionalidad a la pá
                 </button>
             </div>
         </div>
-       <!-- Este código representa una sección de pie de página con un botón que enlaza con la siguiente
-       página del proyecto, que es "digitalArt.html".-->
-        <div class="Project-footer FooterNext">
+       <!-- Esta es una sección de código HTML que representa el pie de página de la página del proyecto
+       WeTransfer. Incluye dos botones, uno para volver a la página anterior (vinculado a
+       "digitalArt.html") y otro para ir a la página siguiente (vinculado a "beats.html").  -->
+        <div class="Project-footer FooterBoth">
+            <button class="Footer-btn Back">
+                <a href="digitalArt.html" class="Footer-a"> Back</a>
+            </button>
             <button class="Footer-btn Next">
-                <a href="digitalArt.html" class="Footer-a"> Next</a>
+                <a href="beats.html" class="Footer-a"> Next</a>
             </button>
         </div>
-    </section> 
+    </section>
 </body>
 </html>

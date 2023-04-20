@@ -120,10 +120,16 @@
 
 /* PORTFOLIO */
     /* HOME */
+/* Este código  define los estilos CSS para la sección de inicio de una página web. Establece el
+ancho y el color de fondo de la sección, así como la posición y los estilos de varios elementos
+dentro de la sección, como el encabezado, la barra de navegación y el texto. También incluye efectos
+de desplazamiento para los enlaces de navegación. */
 .Home{
     width: 100%;
     min-height: 100vh;
     background-color: #FFFAF4;
+    overflow: hidden;
+    position: relative;
    
     
     /* background-color: red; */
@@ -134,20 +140,32 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 2em 1em 0em 1em;
     
 
 }
 .Indice{
     /* background: rebeccapurple; */
     font-size: 1.5em;
-    padding: 2em;
+    padding: 1em;
+   
+}
+.Home-svg{
+
+  width: 3em;
+  /* background-color: red; */
+  display: none;
+  margin-right: 5em;
+  cursor: pointer;
 }
 .Home-p{
     /* background-color: lawngreen; */
     text-transform: uppercase;
     writing-mode: vertical-lr;
-    padding: 1em;
-    animation: movimiento  10s infinite alternate;
+    font-size: 1em;
+    word-spacing: .5em;
+   
+    /* animation: movimiento  10s infinite alternate; */
     
 }
 .Home-nav{
@@ -177,87 +195,272 @@
     padding: .8em;
     transition: all 1s ease;
 }
-.Home-li:hover{
-    color:#444343;
-    transform: scale(1.1);
+
+.Home-a::after{
+  content: '';
+  background-color:black;
+  width: 100%;
+  height: 1px;
+  display: block;
+  transform: scaleX(0);
+  transition: all .4s ease;
+  transform-origin: right;
 }
+.Home-a:hover::after{
+  color: #444343;
+  transform: scaleX(1);
+
+}
+
 .Home-h1{
-    width: 100%;
-    /* background-color: red; */
-    font-size: 21.2em;
-    line-height: 200px;
+  width: 100%;
+  /* background-color: blue; */
+  font-size: 21.2em;
+  line-height: 200px;
+  position: absolute;
+}
+.Nombre{
+  bottom: 27%;
+  left: -1%;
+  /* background-color: red; */
+}
+.Apellido{
+
+  bottom: 3%;
+  left: -1%;
+  /* background-color: #ff7ae9; */
 }
 
-@keyframes movimiento{
-    from{
-        transform: translateY(0%);
-       
+/* Nav-Mobile */
 
-    }
-    to{
-        transform: translateY(200%);
-        
-
-    }
+/* Este código  define los estilos CSS para un menú de navegación móvil para la página de inicio
+de un sitio web. Incluye estilos para el menú, el encabezado y los
+elementos del menú. El menú está oculto de forma predeterminada y se vuelve visible cuando se
+agrega una determinada clase al contenedor. Los estilos incluyen posicionamiento, tamaño, colores y
+transiciones. */
+.Home-navMobile{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #202020;
+  opacity: 0;
+  pointer-events: none;
+  color: #FFFAF4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* background-color: green; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease;
+  transform: translateY(-50%);
 }
+.Home-navMobile.isVisible{
+  opacity: 1;
+  pointer-events:all; 
+  transform: translateY(0);
+}
+.Home-headerMobile{
+ width: 100%;
+ /* min-height: 18vh; */
+ 
+ display: flex;
+ flex-flow: row nowrap;
+ justify-content:center;
+ align-items: flex-start;
+ padding: 2em 1em 0em 1em;
+ /* background-color: red; */
+}
+.Home-spanMobile{
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: 1.5em;
+}
+.Home-pMobile{
+  text-transform: uppercase;
+  font-size: 1em;
+  word-spacing: .5em;
+  writing-mode: vertical-lr;
+  /* background-color: rebeccapurple; */
+  
+  position: absolute;
+  top: 5%;
+  right: 1%;
+
+}
+.Home-imgMobile{
+  width: 4em;
+  cursor: pointer;
+  /* background-color: blue; */
+
+  animation: rotate 6s linear infinite;
+}
+
+.Home-ulMobile{
+  width: 100%;
+  /* background-color: rgb(255, 0, 132); */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap:2em;
+
+}
+.Home-liMobile{
+  font-size: 8em;
+  transition: all .5s ease;
+}
+.Home-liMobile:hover{
+  color: #ff7ae9;
+  transform: scale(1.1);
+}
+.Home-spanNumber{
+  font-size: .2em;
+}
+
 
 /* ABOUT */
 
+/* Este código  define los estilos CSS para una sección " About" de una página web. Establece
+el color de fondo, el relleno y el posicionamiento de la sección, así como el diseño y el estilo de
+su encabezado, contenido y subelementos, como una imagen SVG giratoria, un encabezado de texto
+vertical, un enlace de CV y una galería. con un efecto de superposición. El código también incluye
+efectos de desplazamiento y transiciones para algunos elementos. */
 .About{
-    width: 100%;
-    min-height: 100vh;
-    background-color:#202020;
-    padding-top:2em;
-    color: #FFFAF4;
+  width: 100%;
+  min-height: 100vh;
+  background-color:#202020;
+  padding-top:2em;
+  color: #FFFAF4;
+  position: relative;
+
     
 }
 .About-header{
-    width: 100%;
-    /* background-color: greenyellow; */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  /* background-color: greenyellow; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 
 }
-.About-span{}
 .About-svg{
-    width: 3em;
-   
-    margin-right: 3em;
-    /* background-color: aqua; */
+  width: 4em;
+  margin-right: 4em;
+
+  animation: rotate 6s linear infinite;
+  /* background-color: aqua; */
 }
 .About-content{
-    width: 100%;
-    height: 80vh;
-    /* background-color: darkmagenta; */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap:1em;
-    position: relative;
+  width: 90%;
+  height: 90vh;
+  margin: auto;
+  /* background-color: darkmagenta; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
 }
 .About-h2{
     font-size: 16em;
     position: absolute;
     left: -4%;
     bottom: 0;
+    transform: translateX(-30%);
+    transition: all .5s ease;
     /* background-color: green; */
     
     writing-mode: vertical-lr;
 }
+.About-h2.isActive{
+ 
+  transform: translateX(0);
+
+}
+.About-cv{
+  position: absolute;
+  bottom: 6%;
+  right: 4%;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1em;
+  border:1px solid #FFFAF4;
+  border-radius: 50%;
+  padding: 1em;
+  transition: all .5s ease-in-out;
+}
+.About-cv:hover{
+  transform: scale(1.1);
+  border: #ff7ae9 2px solid;
+  border-style:dotted;
+  color: #ff7ae9;
+}
+.About-container{
+  /* background-color: aqua; */
+  width: 100%;
+  /* min-height: 70vh; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10em;
+  
+}
 .About-p{
-    margin: auto;
-    width: 50%;
-    position: absolute;
-    top:20%;
-    left: 30%;
-    font-family: 'Didact Gothic', sans-serif;
-    /* background-color: hotpink; */
+  width: 30%;
+  /* position: absolute;
+  top:20%;
+  left: 30%; */
+  font-family: 'Didact Gothic', sans-serif;
+  /* background-color: hotpink; */
+}
+.About-galeria{
+  width: 20%;
+  /* background-color: red; */
+  position: relative;
+  
+}
+.About-video{
+  width: 100%;
+}
+.Overlay{
+  width: 100%;
+  height: 100%;
+  background-color: #ff7ae9;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+
+  transition: all .4s ease;
+}
+.Overlay-span{
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.About-galeria .Overlay:hover{
+  opacity: 0;
 }
 
 /* WORKS */
+/* Este código  define los estilos CSS para una sección de una página web llamada "Works".
+Establece el ancho, la altura, el relleno, el color de fondo y el posicionamiento de la sección.
+También define los estilos para un elemento contenedor y una lista de elementos dentro del
+contenedor. Los elementos de la lista tienen un efecto de transición y se pueden activar con una
+clase de "isActive". El código también define los estilos para un elemento contenedor que contiene
+una imagen y un encabezado. La imagen tiene un efecto de transición y se puede activar con una clase
+de "isActive". El encabezado está posicionado absolutamente y tiene un tamaño de fuente grande. */
 .Works{
   
   width: 100%;
@@ -271,23 +474,39 @@
   margin: auto;
   width: 95%;
   /* background-color: red; */
-  margin-top:2em;
+  margin-top:1em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  position: re;
-
 }
 
 .Works-li{
   font-size: 7em;
   font-family: 'Didact Gothic', sans-serif;
-
+  transition:all .5s ease;
+  transform: translateX(-100%);
+}
+.Works-li.isActive{
+  transform: translateX(0);
+ 
+  /* opacity: 1; */
+}
+.pixar.isActive{
+  transition:all .5s ease;
+}
+.digital.isActive{
+  transition:all 1s ease;
+}
+.weTransfer.isActive{
+  transition:all 1.5s ease;
+}
+.beats.isActive{
+  transition:all 2s ease;
 }
 .Works-li:hover{
-  font-weight: 900;
-  color: #444343;
+  transform: scale(0.9);
+  opacity: 30%;
 }
 
 .Works-container{
@@ -297,15 +516,28 @@
   margin-right: 2em;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position:relative;
 
 }
 .Works-img{
+  width: 100%;
   background-color: #444343;
+
+  opacity: 0;
+  transform: translateY(-10%);
+  
   position: absolute;
   left:0;
+  top: 0;
+  transition: all .5s ease;
+}
+
+.Works-img.isActive{
+  opacity: 1;
+  transform: translateY(0);
+  /* transition: all 1s ease; */
 }
 .Works-h2{
   /* background-color: goldenrod; */
@@ -315,77 +547,236 @@
   right: -2%;
 }
 
-/* PIXAR */
+/* Projects */
 
-.Pixar{
+/* El código anterior define los estilos CSS para una página de proyecto. Incluye estilos para las
+secciones de encabezado, contenido principal y pie de página de la página, así como animaciones para
+ciertos elementos, como las estrellas. El código también incluye estilos para cuando la página está
+en un estado "activo", indicado por la clase ".isActive". */
+
+.Project{
   width: 100%;
   min-height: 100vh;
   background-color:#FFFAF4;
   font-family: 'Didact Gothic', sans-serif;
+  transition: 1s all ease;
+  position: relative;
+}
+.Project.isActive{
+  background-color:#202020;
+  color:#FFFAF4;
 }
 .Project-header{
   width: 100%;
   /* background-color: gold; */
+  padding: 3em;
+
+  display: flex;
+  flex-flow:row nowrap ;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 100px;
+
+}
+.Header-title{
+  width: 100%;
+  /* background-color: red; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 3em;
-
-  line-height: 100px;
-  border-bottom: 2px solid black;
-
 }
-.Project-p{
+.Header-p{
   /* background-color: aqua; */
   font-size: 13em;
   font-family: 'Reenie Beanie', cursive;
+  animation: slideRight 1s ease;
 
 }
-.Project-h3{
-  font-size: 8em;
+.Header-h3{
+  font-size: 9em;
+  animation: slideRight .5s ease;
+
 }
-.Carrousel{
-  width: 100%;
-  min-height: 60vh;
+.Header-button{
+  /* background-color: #ff7ae9; */
+  width: 8em;
+  margin: 2em;
+  transition: all .5s ease;
+}
+.Header-button:hover{
+  transform: scale(1.3);
+}
+.Project-main{
+  width: 60%;
+  min-height: 40vh;
+  /* background-color: red; */
+  margin: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
- 
+}
+.Main-p{
+  font-size: 1.2em;
+  /* background-color: #444343; */
+  padding: 2em;
+  animation: slideDown .5s ease;
+  text-align: center;
+}
+.Project-footer{
+  margin: auto;
+  padding: 3em 0em;
+  width:90%;
+}
+.FooterNext{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  /* background-color: red; */
+}
+.FooterBack{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.FooterBoth{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Footer-btn{
+  font-size: 1.2em;
+  transition: all .5s ease;
+  /* background-color: red; */
+}
+.Footer-btn:hover{
+  color: #ff7ae9;
+  transform: scale(1.1);
+}
+.Footer-a::after{
+  content: '';
+  display: block;
+  background-color: #ff7ae9;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .4s all ease;
+}
+.Footer-a:hover::after{
+  transform: scaleX(100%);
+}
+
+.Project-star{
+  opacity: 0;
+  width: 5em;
+  position: absolute;
+  animation: rotate 7s infinite linear;
+  transition: all 1s ease;
+}
+.Project-star.isActive{
+  opacity: 1;
+}
+.uno{
+  top:10%;
+  left: 60%;
+}
+.dos{
+  top:25%;
+  left: 10%;
+  animation: rotate 5s infinite linear;
+  animation-direction:reverse;
+  width: 3em;
+
+}
+.tres{
+  width: 3em;
+  top:40%;
+  right: 10%;
+}
+.cuatro{
+  width: 4em;
+  top:50%;
+  left:50%;
+  z-index: 1;
+  animation-direction: reverse;
+}
+.cinco{
+  
+  bottom: 5%;
+  left: 5%
+}
+.seis{
+  width: 4em;
+  bottom:7%;
+  right: 25%;
+  z-index: 1;
+  animation-direction: reverse;
+  animation-duration: 3s;
+}
+
+/* Carrousel */
+
+/* Este código  es un código CSS para un carrusel. Define los estilos para el
+contenedor, botones e imágenes del carrusel.  Los botones tienen forma circular, un color de
+fondo y cambian de tamaño al pasar el mouse sobre ellos.  El carrusel tiene un efecto de
+transición cuando se mueve entre imágenes.  */
+
+.Carrousel{
+  width: 100%;
+  min-height: 60vh;
   
   /* background-color: red; */
+ 
 }
 .Carrousel-container{
   width: 100%;
-  min-height: 400px;
-  background-color: gold;
-  
+  /* min-height: 25rem; */
+  margin-top: 3.2em;
+  overflow: hidden;
+  /* background-color: gold; */
+  position: relative;
+ 
+
 }
 .Carrousel-btn{
-  width: 2em;
-  background-color: rgb(157, 156, 156);
+  width: 3em;
+  background-color: #ff7ae9;
   opacity: 80%;
   border-radius: 50%;
-  padding: .5em;
+  padding: 1em;
   color: #FFFAF4;
   margin: 1em;
   transition: all .5s ease;
-}
-.Carrousel-btn:hover{
-  transform: scale(1.2);
-}
-.Carrousel-btn.isActive{
-  background-color: #444343;
+  margin: 1em auto;
+  cursor: pointer;
+  position: absolute;
+  top: calc( 50% - 1em);
   
 }
-.Prev{}
-.Next{}
-.Carrousel-svg{}
+.Carrousel-btn:hover{
+  transform: scale(1.5);
+  background-color: #ff7ae9;
+}
 
+.Prev{
+/* background-color: hotpink; */
+left:  2%;
+z-index: 1;
+
+
+}
+.Next{
+/* background-color: aqua; */
+ right: 2%;
+}
 .Carrousel-galeria{
   width: 200%;
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
 
   display: grid;
   grid-template-columns: repeat(6 , 1fr );
@@ -396,17 +787,518 @@
 
 }
 .Carrousel-img{
-  width: 100%;
+  /* width: 100%; */
   background-color: grey;
-  
-  min-height: 25em;
+
+  /* min-height: 25em; */
   transform: translateX(0%);
-}
-.Carrousel-img.isActive{
-  transform: translateX(-80%);
+
 }
 .Carrousel-galeria.isActive{
   transform: translateX(-80%);
   overflow: hidden;
 }
+
+/* CONTACT */
+
+/* El código anterior define los estilos CSS para una sección de una página web con el nombre de clase
+"Contacto". Establece el color de fondo, los estilos de fuente y el diseño de la sección, incluidos
+el encabezado, el contenido principal y el pie de página. También incluye animaciones para ciertos
+elementos y efectos de desplazamiento para enlaces. */
+
+.Contact{
+  /* padding-top:2em; */
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 2em;
+  background-color: #202020;
+  color: #FFFAF4;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease;
+ 
+}
+.Contact.isActive{
+  background-color:#ff7ae9;
+  color: #202020;
+}
+.Contact-header{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+ 
+ 
+
+}
+.Contact-p{
+  font-size: 10em;
+  font-family: 'Didact Gothic', sans-serif;
+  /* background-color: aqua; */
+  animation: movimiento 5s linear infinite alternate;
+  
+}
+
+.Contact-main{
+  width: 100%;
+  min-height: 40vh;
+  /* margin-top: 10vh; */
+  /* background-color: palegreen; */
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; 
+
+}
+
+.Contact-ul{
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7em;
+
+
+}
+
+.Contact-li{
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 4em;
+}
+.Contact-a::after{
+  display: block;
+  content: '';
+  background: rgb(255, 56, 156);
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transition: all .4s ease;
+  transform-origin: left;
+}
+.Contact-a:hover::after{
+  transform: scaleX(1);
+}
+.Contact-a:hover{
+  color: rgb(255, 56, 156);
+ 
+}
+.Contact-footer{
+  /* background-color: hotpink; */
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Contact-h2{
+  /* background-color: blue; */
+  font-size: 18em;
+  position: absolute;
+  bottom:-9%;
+  left: -1%;
+}
+
+.Contact-return{
+  width: 8em;
+  /* background-color: grey; */
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  transition: all .5s ease;
+}
+.Contact-return:hover{
+  transform: scale(1.3);
+}
+.Contact-img{
+  width: 7em;
+  position: absolute;
+  top:10%;
+  left: 20%;
+  animation: rotate 7s linear infinite;
+  /* background-color: rgb(243, 167, 167); */
+}
+.mobile{
+  top:20%;
+  left: 5%;
+}
+
+/* Animaciones */
+/* El código anterior define varias animaciones de  CSS. */
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+
+  }
+
+  to{
+    transform: rotate(360deg);
+
+  }
+}
+
+@keyframes slideRight{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown{
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes movimiento{
+  from{
+    transform: translateX(0%);
    
+    
+  }
+
+  to{
+    transform: translateX(-80%);
+   
+
+  }
+}
+@keyframes movLateral{
+  from{
+    transform: translateX(-10%);
+  }
+  to{
+    transform: translateX(110%);
+  }
+}
+@keyframes movMobile{
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(100%);
+
+  }
+}
+
+/* Responsive  */
+
+/* Este código  es un código  que establece diferentes estilos para
+diferentes tamaños de pantalla. Ajusta los tamaños de fuente, las posiciones y los anchos de varios
+elementos en la página web para garantizar que se muestren correctamente en diferentes dispositivos
+con diferentes tamaños de pantalla. El código utiliza diferentes selectores de CSS para apuntar a
+elementos específicos y ajustar sus estilos en consecuencia. */
+
+@media(max-width:1360px){
+  .Home-h1{
+    font-size: 20em;
+  }
+  .Contact-img{
+    left: 50%;
+  }
+
+}
+@media(max-width:1300px){
+  .Home-h1{
+    font-size: 18em;
+  }
+  .Works-h2{
+    font-size: 15em;
+    bottom: -9%;
+  }
+  .Works-li{
+    font-size: 5em;
+  }
+  .Contact-p{
+    font-size: 8em;
+    animation: none;
+  }
+  .Contact-img{
+    width: 6em;
+  }
+  .Contact-return{
+    right: 1%;
+    bottom: 17%;
+  }
+  .Contact-h2{
+    font-size: 12em;
+    bottom: -7%;
+  }
+}
+@media(max-width:1125px){
+  .Home-h1{
+    font-size: 15em;
+  }
+  .Nombre{
+    bottom:20%;
+  }
+  .Apellido{
+    bottom: 0;
+  }
+  .About-h2{
+    font-size: 15em;
+    left: -5%;
+  }
+  .About-container{
+    justify-content: flex-end;
+  }
+  .About-p{
+    width: 40%;
+  }
+  .Contact-img{
+    display: none;
+  }
+
+}
+@media(max-width:1000px){
+  .Home-ul{
+    display: none;
+  }
+  .Home-svg{
+    display: block;
+  }
+  .Home-span{
+    padding: 0 1em;
+  }
+
+}
+@media(max-width:950px){
+  .Home-h1{
+    font-size: 13em;
+  }
+  .Nombre{
+    bottom:18%;
+  }
+  .Apellido{
+    bottom: -1%;
+  }
+  .About-container{
+    gap:5em;
+  }
+  .About-h2{
+    left: -6%;
+  }
+  .Contact-header{
+    flex-direction: column;
+  }
+  .Contact-span{
+    padding: 0 1em;
+  }
+  .Contact-main{
+    min-height: 60vh;
+  }
+  .Contact-ul{
+    flex-direction: column;
+    gap: 2em;
+   
+  }
+  .Contact-li{
+    font-size: 3em;
+  }
+  .Contact-h2{
+    font-size: 8em;
+    bottom: -5%;
+  }
+  .Contact-p{
+    font-size: 5em;
+   
+  }
+
+ 
+
+}
+@media(max-width:800px){
+  .Nombre{
+    font-size: 15em;
+  }
+  .Apellido{
+    font-size: 12em;
+  }
+  .About-header{
+    align-items: flex-start;
+  }
+  .About-content{
+    height: 66vh;
+  }
+  .About-container{
+    flex-direction: column;
+    gap:3em;
+  }
+  .About-p{
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+  .About-h2{
+    font-size: 8em;
+    left:-6%;
+
+  }
+  .About-span{
+    padding: 0 1em;
+    
+  }
+  .Overlay-span{
+    font-size: 1em;
+  }
+  .About-cv{
+    font-size: 1em;
+    bottom:4%;
+  }
+  .About-svg{
+    width: 3em;
+    margin-right: 1em;
+  }
+  .Works-wrapper{
+    flex-direction: column;
+    gap:2em;
+  }
+  .Works-ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+  }
+  .Works-li{
+    font-size: 3em;
+  }
+  .Works-container{
+    width: 60%;
+    margin: inherit;
+  }
+  .Works-h2{
+    font-size: 10em;
+    bottom:-6%;
+  }
+  
+}
+@media(max-width:750px){
+  .Nombre{
+    font-size: 15em;
+    bottom: 15%;
+  }
+  .Apellido{
+    font-size: 11em;
+  }
+  
+}
+@media(max-width:700px){
+  .Nombre{
+    font-size: 15em;
+    bottom: 10%;
+  }
+  .Apellido{
+    font-size: 10em;
+    bottom: -4%;
+  }
+  .Header-h3{
+    font-size: 6em;
+  }
+  .Header-p{
+    font-size: 6em;
+  }
+  .Header-title{
+    line-height: 2em;
+  }
+  .Header-button{
+    margin: inherit;
+  }
+  .Main-p{
+    font-size: 1em;
+  }
+  .Home-headerMobile{
+    
+  }
+  .Home-ulMobile{
+    gap:1em;
+  }
+  .Home-liMobile{
+    font-size: 7em;
+  }
+ 
+}
+@media(max-width:600px){
+  .Nombre{
+    font-size: 20em;
+    bottom: 4%;
+   
+  }
+  .Apellido{
+   display: none;
+  }
+  .Works-container{
+    width: 80%;
+  
+  }
+  .Home-liMobile{
+    font-size: 5em;
+  }
+}
+@media(max-width:500px){
+  .Nombre{
+    font-size: 17em;
+    bottom: 0%;
+  }
+  
+  .About-p{
+    font-size: .7em;
+  }
+  .About-span{
+    font-size: 1em;
+  }
+}
+@media(max-width:450px){
+  .Nombre{
+    font-size: 15em;
+  }
+  .Works-container{
+    width: 100%;
+  
+  }
+  .Contact-h2{
+    font-size: 6em;
+    bottom: -4%;
+  }
+  
+}
+@media(max-width:380px){
+  .Nombre{
+    font-size: 12em;
+    bottom: -3%; 
+  }
+  .Works-h2{
+    font-size: 8em;
+    bottom: -4%;
+  }
+  .Contact-main{
+    min-height: 50vh;
+  }
+  .Header-h3{
+    font-size: 4em;
+  }
+  .Header-p{
+    font-size: 4em;
+  }
+ 
+
+}
+@media(max-width:300px){
+  .Nombre{
+    font-size: 9em;
+    bottom: -5%;
+    
+  }
+
+}
+

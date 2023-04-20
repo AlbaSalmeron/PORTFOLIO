@@ -12,52 +12,131 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
-    <div class="Home">
+<!-- Esto define la estructura HTML para la sección de inicio del sitio web. Incluye una
+cabecera con logo y enlaces de navegación, tanto para escritorio como para móvil. -->
+    <section class="Home" id="home">
         <div class="Home-header">
             <span class="Home-span Indice">01/04</span>
-            <p class="Home-p">Frontend developer</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="Home-svg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <p class="Home-p">Web & UX/UI desing</p>
         </div>
+       <!-- Esto está creando una barra de navegación con tres enlaces (acerca de, trabajos y contacto)
+       que llevarán al usuario a diferentes secciones de la página web al hacer clic. Los enlaces se
+       diseñan utilizando las clases CSS Home-li, Home-a y Home-ul. -->
         <nav class="Home-nav">
             <ul class="Home-ul">
-                <li class="Home-li"><a href="#" class="Home-a">about</a></li>
-                <li class="Home-li"><a href="#" class="Home-a">works</a></li>
-                <li class="Home-li"><a href="#" class="Home-a">contact</a></li>
+                <li class="Home-li"><a href="#about" class="Home-a" >about</a></li>
+                <li class="Home-li"><a href="#works" class="Home-a" >works</a></li>
+                <li class="Home-li"><a href="#contact" class="Home-a" >contact</a></li>
+            </ul>
+        </nav>
+        <!-- Se trata de crear una barra de navegación para dispositivos móviles con un encabezado que
+        incluye un logo y un título, y una lista de enlaces a diferentes secciones del sitio web.
+        Los enlaces están diseñados utilizando las clases CSS Home-liMobile, Home-aMobile y
+        Home-ulMobile. -->
+        <nav class="Home-navMobile">
+            <div class="Home-headerMobile">
+                <span class="Home-spanMobile">01/04</span>
+                <img src="assets/star.png" alt="" class="Home-imgMobile">
+                <p class="Home-pMobile">Web & UX/UI desing</p>
+            </div>
+            <ul class="Home-ulMobile">
+               
+                <li class="Home-liMobile"><a href="#about" class="Home-aMobile"><span class="Home-spanNumber">02.</span>about</a></li>
+                <li class="Home-liMobile"><a href="#works" class="Home-aMobile"><span class="Home-spanNumber">03.</span>works</a></li>
+                <li class="Home-liMobile"><a href="#contact" class="Home-aMobile"><span class="Home-spanNumber">04.</span>contact</a></li>
             </ul>
         </nav>
         <h1 class="Home-h1 Nombre">alba</h1>
         <h1 class="Home-h1 Apellido">salmerón</h1>
-    </div>
+    </section>
 
-    <div class="About">
+   <!-- Esto define la estructura HTML para la sección "Acerca de" de un sitio web. Incluye un encabezado
+   con una imagen de estrella y un número de índice, una sección de contenido con un encabezado, un
+   enlace para descargar un CV y un contenedor con un párrafo de texto y una galería de videos. La
+   galería de videos incluye un video y una superposición con texto. La sección se identifica
+   mediante la clase "Acerca de" y el ID "acerca de". -->
+
+    <section class="About" id="about">
         <div class="About-header">
             <span class="About-span Indice"> 02/04</span>
-            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="About-svg" viewBox="0 0 16 16">
-                <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
-            </svg>
+            <img src="assets/star.png" alt="star" class="About-svg">
         </div>
         <div class="About-content">
-            <h2 class="About-h2">about</h2>
-            <p class="About-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt porro repudiandae voluptatem unde nostrum vitae placeat reiciendis corrupti ipsa. Repudiandae dolores distinctio inventore tempore tempora velit sunt laudantium obcaecati sint.</p>
+            <h2 class="About-h2" >about</h2>
+            <span class="About-cv"><a href="" class="About-a" target="_blank" download="">CV</a></span>
+            <div class="About-container">
+                <p class="About-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aspernatur, aperiam veritatis assumenda neque vitae velit quis atque aliquid at reprehenderit ad tenetur ab nam sint, eius dolor nostrum consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, dolorum vitae. Repellendus fugit exercitationem ratione modi fugiat corporis quod accusantium odit? Fugit animi porro, ducimus mollitia delectus pariatur quod hic!
+                Rerum quos ullam placeat nesciunt nisi eius dolorum voluptatibus quia minus esse nam commodi iure tempora minima ipsam corporis vel, explicabo repudiandae perferendis! Porro maxime repudiandae ad quas sint nesciunt.
+                Iure dolores laboriosam voluptatibus, repellat nihil quam, provident ullam rem explicabo expedita eaque! Ipsum, saepe. Tenetur, ipsam! Recusandae velit soluta, minus, numquam rerum natus delectus iure nesciunt nisi praesentium error.
+                </p>
+               <!-- Este código está creando un contenedor con un video y una superposición con texto que
+               dice "¡ese soy yo!". El video está configurado para reproducción automática y bucle,
+               y se identifica con la clase "Acerca del video". La superposición se crea con un div
+               y un lapso con la clase "Overlay-span". El contenedor se identifica con la clase
+               "About-galeria". -->
+                <div class="About-galeria">
+                    <video class="About-video" autoplay muted loop>
+                        <source src="assets/video1.mov">
+                    </video>
+                    <div class="About-overlay Overlay">
+                        <span class="Overlay-span">that's me!</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="Works">
+    </section>
+   <!-- Esto define la estructura HTML para la sección "Obras" de un sitio web. Incluye un encabezado con
+   un número de índice y un título, un envoltorio con una lista de enlaces a diferentes trabajos y
+   un contenedor con imágenes de esos trabajos. -->
+    <section class="Works" id="works">
         <span class="Works-span Indice"> 03/04</span>
+       <!-- El div `Works-wrapper` está creando un contenedor para la sección "Works" del sitio web.
+       Incluye una lista de enlaces a diferentes obras (Pixar, Digital Art, WeTransfer y Beats) y un
+       contenedor con imágenes de dichos trabajos. -->
         <div class="Works-wrapper">
             <ul class="Works-ul">
-                <li class="Works-li"><a href="#" class="Works-a">pixar</a></li>
-                <li class="Works-li"><a href="#" class="Works-a">digital art</a></li>
-                <li class="Works-li"><a href="#" class="Works-a">weTransfer</a></li>
-                <li class="Works-li"><a href="#" class="Works-a">beats</a></li>
+                <li class="Works-li pixar"><a href="pixar.html" class="Works-a" target="_blank">pixar</a></li>
+                <li class="Works-li digital"><a href="digitalArt.html" class="Works-a" target="_blank">digital art</a></li>
+                <li class="Works-li weTransfer"><a href="weTransfer.html" class="Works-a" target="_blank">weTransfer</a></li>
+                <li class="Works-li beats"><a href="beats.html" class="Works-a" target="_blank">beats</a></li>
             </ul>
             <div class="Works-container">
-                <img src="" alt="imagen" class="Works-img">
-                <img src="" alt="imagen" class="Works-img">
-                <img src="" alt="imagen" class="Works-img">
-                <img src="" alt="imagen" class="Works-img">
+                <img src="assets/pixar.jpg" alt="imagen" class="Works-img">
+                <img src="assets/digitalArt.jpg" alt="imagen" class="Works-img">
+                <img src="assets/weTransfer.jpg" alt="imagen" class="Works-img">
+                <img src="assets/beats.jpg" alt="imagen" class="Works-img">
             </div>
         </div>
         <h2 class="Works-h2">works</h2>
-    </div>
-    
+    </section>
+   <!-- Esto define la estructura HTML para la sección "Contacto" de un sitio web. Incluye un encabezado
+   con un título y una imagen, una sección principal con una lista de enlaces para contactar al
+   propietario del sitio web y un pie de página con un botón para volver a la sección de inicio. -->
+    <section class="Contact" id="contact">
+        <div class="Contact-header">
+            <span class="Contact-span Indice">04/04</span>
+            <p class="Contact-p">let's talk!</p>
+        </div>
+        <img src="assets/happy.png" alt="" class="Contact-img happy">
+        <div class="Contact-main">
+            <ul class="Contact-ul">
+                <li class="Contact-li"><a href="mailto:a.salmeronfarran@gmail.com" class="Contact-a" >e-mail</a></li>
+                <li class="Contact-li"><a href="" class="Contact-a">linkedIn</a></li>
+                <li class="Contact-li"><a href="" class="Contact-a">gitHub</a></li>
+            </ul>
+        </div>
+        <div class="Contact-footer">
+            <h2 class="Contact-h2">contact</h2>
+           <!-- Este código está creando un botón con un enlace a la sección de inicio del sitio web.
+           Cuando se hace clic en el botón, el usuario volverá a la parte superior de la página
+           donde se encuentra la sección de inicio. -->
+            <button class="Contact-button">
+                <a href="#home" class="Contact-a Button"><img src="assets/take-me-home.webp" alt="home" class="Contact-return" ></a>
+            </button>
+        </div>
+    </section>
 </body>
 </html>
