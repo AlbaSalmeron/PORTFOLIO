@@ -294,6 +294,8 @@ transiciones. */
 .Home-imgMobile{
   width: 4em;
   cursor: pointer;
+  position: absolute;
+  top: 5%;
   /* background-color: blue; */
 
   animation: rotate 6s linear infinite;
