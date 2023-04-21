@@ -412,11 +412,17 @@ efectos de desplazamiento y transiciones para algunos elementos. */
 }
 .About-p{
   width: 30%;
-  /* position: absolute;
-  top:20%;
-  left: 30%; */
+  line-height: 2em;
   font-family: 'Didact Gothic', sans-serif;
-  /* background-color: hotpink; */
+
+}
+
+.About-pSpan{
+  font-size: 3em;
+}
+.About-SpanNombre{
+  font-size: 2em;
+  color: #ff7ae9;
 }
 .About-galeria{
   width: 20%;
