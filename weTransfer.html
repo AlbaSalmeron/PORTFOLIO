@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03-weTransfer</title>
+    <link rel="shortcut icon" href="assets/star.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display:wght@400;500;600;700;800;900&family=Reenie+Beanie&display=swap" rel="stylesheet">
@@ -26,7 +27,7 @@
                 <h3 class="Header-h3">weTransfer</h3>
             </div>
             <img src="assets/estrella.png" alt="" class="Project-star uno">
-             <a href="index.html" class="Header-a" target="_blank"><img src="assets/take-me-home.webp" alt="" class="Header-img"></a>
+             <a href="index.html" class="Header-a" target="_blank" rel="noreferrer" title="home"><img src="assets/take-me-home.webp" alt="" class="Header-img"></a>
         </div>
         <div class="Project-main Main">
             <img src="assets/estrella2.png" alt="" class="Project-star dos">
@@ -43,25 +44,25 @@
        carrusel está controlado por un archivo JavaScript vinculado al documento HTML. -->
         <div class="Project-carrousel Carrousel">
             <div class="Carrousel-container">
+                <div class="Carrousel-galeria">
+                    <div class="Carrousel-elemento">
+                        <picture><img src="assets/weTransfer1.jpg" alt="imagen" class="Carrousel-img"></picture>
+                    </div>
+                    <div class="Carrousel-elemento">
+                        <picture><img src="assets/weTransfer2.jpg" alt="imagen" class="Carrousel-img"></picture>
+                    </div>
+                    <div class="Carrousel-elemento">
+                        <picture><img src="assets/weTransfer3.jpg" alt="imagen" class="Carrousel-img"></picture>
+                    </div>
+                    <div class="Carrousel-elemento">
+                       <picture><img src="assets/weTransfer4.jpg" alt="imagen" class="Carrousel-img"></picture> 
+                    </div>
+                </div>
                 <button class="Carrousel-btn Prev">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="Carrousel-svg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
                     </svg>
                 </button>
-                <div class="Carrousel-galeria">
-                    <div class="Carrousel-elemento">
-                        <img src="assets/weTransfer1.jpg" alt="imagen" class="Carrousel-img">
-                    </div>
-                    <div class="Carrousel-elemento">
-                        <img src="assets/weTransfer2.jpg" alt="imagen" class="Carrousel-img">
-                    </div>
-                    <div class="Carrousel-elemento">
-                        <img src="assets/weTransfer3.jpg" alt="imagen" class="Carrousel-img">
-                    </div>
-                    <div class="Carrousel-elemento">
-                        <img src="assets/weTransfer4.jpg" alt="imagen" class="Carrousel-img">
-                    </div>
-                </div>
                 <button class="Carrousel-btn Next">
                     <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="Carrousel-svg" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
@@ -73,8 +74,8 @@
        WeTransfer. Incluye dos botones, uno para volver a la página anterior (vinculado a
        "digitalArt.html") y otro para ir a la página siguiente (vinculado a "beats.html").  -->
         <div class="Project-footer FooterBoth">
-                <a href="digitalArt.html" class="Footer-a"> Back</a>
-                <a href="beats.html" class="Footer-a"> Next</a>
+                <a href="digitalArt.html" class="Footer-a" target="_blank" rel="noreferrer" title="back"> Back</a>
+                <a href="beats.html" class="Footer-a" target="_blank" rel="noreferrer" title="next"> Next</a>
         </div>
     </section>
 </body>

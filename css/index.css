@@ -751,6 +751,7 @@ transición cuando se mueve entre imágenes.  */
  
 
 }
+
 .Carrousel-btn{
   width: 3em;
   background-color: #ff7ae9;
@@ -763,13 +764,16 @@ transición cuando se mueve entre imágenes.  */
   margin: 1em auto;
   cursor: pointer;
   position: absolute;
-  top: calc( 50% - 1em);
+  top: calc( 50% - 1.5em);
   
 }
 .Carrousel-btn:hover{
-  transform: scale(1.5);
-  background-color: #ff7ae9;
+  transform: scale(.9);
 }
+.Carrousel-btn:active{
+  background-color: rgb(255, 56, 156);;
+}
+
 
 .Prev{
 /* background-color: hotpink; */
@@ -792,6 +796,7 @@ z-index: 1;
   gap:2em;
   transform: translateX(-0%);
   transition: all .5s ease;
+
 
 }
 .Carrousel-img{
@@ -1234,7 +1239,10 @@ elementos específicos y ajustar sus estilos en consecuencia. */
   .Home-liMobile{
     font-size: 7em;
   }
- 
+  .Carrousel{
+    min-height: auto;
+  }
+
 }
 @media(max-width:600px){
   .Nombre{
@@ -1252,6 +1260,10 @@ elementos específicos y ajustar sus estilos en consecuencia. */
   .Home-liMobile{
     font-size: 5em;
   }
+  .Project-header{
+    padding: 1em;
+  }
+ 
 }
 @media(max-width:500px){
   .Nombre{
@@ -1264,6 +1276,10 @@ elementos específicos y ajustar sus estilos en consecuencia. */
   }
   .About-span{
     font-size: 1em;
+  }
+  .Carrousel-btn{
+    width: 1em;
+    padding: 0;
   }
 }
 @media(max-width:450px){
