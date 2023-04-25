@@ -13,7 +13,7 @@ const next               = document.querySelector(`.Next`)
 const prev               = document.querySelector(`.Prev`)
 
 const numImg = carrouselImg.length
-const numImgVisibles = 3
+const numImgVisibles = 2
 
 let carrouselContador = 0
 

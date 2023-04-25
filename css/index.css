@@ -452,9 +452,10 @@ efectos de desplazamiento y transiciones para algunos elementos. */
   transition: all .4s ease;
 }
 .Overlay-span{
-  font-family: 'Didact Gothic', sans-serif;
+
+  font-family: 'Playfair Display', serif;
   font-size: 2em;
-  font-weight: 800;
+ 
 }
 
 .About-galeria .Overlay:hover{
